@@ -2,9 +2,9 @@
   "base": {
     "logo": "",
     "project": "QA_GURU_19_Gaevskaya_K_jenkins_notifications",
-    "environment": "qa.guru.HW_14",
+    "environment": "qa.guru.HW_15",
     "comment": "Test Notifications",
-    "reportLink": "https://jenkins.autotests.cloud/job/gaevskaya_demoqaJenkinsTests14hw/1/",
+    "reportLink": "https://jenkins.autotests.cloud/job/gaevskaya_demoqaJenkinsTests15hw/1/",
     "language": "en",
     "allureFolder": "allure-report/",
     "enableChart": true

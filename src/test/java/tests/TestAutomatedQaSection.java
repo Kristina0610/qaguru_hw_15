@@ -18,7 +18,7 @@ public class TestAutomatedQaSection extends TestBase {
   String textValue = "Помогаем сократить трудозатраты";
 
   @Test
-  @Tag("remote2")
+  @Tag("remote")
   @Owner("Kristina Gaevskaya")
   @Epic("Учёба")
   @Story("Дипломный проект")
