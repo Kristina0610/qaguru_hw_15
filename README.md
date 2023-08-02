@@ -37,21 +37,15 @@
 
 ### Запуск тестов из терминала
 ```
-gradle clean test
+gradle remote_test
 ```
-При выполнении команды тесты запустятся локально.
+При выполнении команды тесты запустятся удалённо.
 
 Также можно переопределить параметры запуска:
 ```
-gradle clean test -DbaseUrl=${BASE_URL} -Dbrowser=${BROWSER} -DbrowserSize=${BROWSER_SIZE}
+gradle remote_test -DbaseUrl=${BASE_URL} -Dbrowser=${BROWSER} -DbrowserSize=${BROWSER_SIZE}
 ```
-Примечание: для локального запуска тестов необходимо в папку src/test/resources/properties добавить файл credentials.properties с почтой, паролем, именем и фамилией тестового пользователя. Пример заполненного файла:
-```
-mailAccount = primer@mail.ru
-passwordAccount = 123
-name = Polina
-surname = Rumak
-```
+
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> [Сборка в Jenkins](https://jenkins.autotests.cloud/job/polina_rumak_kontur/)
 ### Параметры сборки
