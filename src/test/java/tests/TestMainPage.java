@@ -13,12 +13,13 @@ public class TestMainPage extends TestBase {
   MainPage mainPage = new MainPage();
 
   String[] services = {"Решения", "Услуги", "Платформа NCW", "Карьера", "Новости", "Компания"};
+
   @Test
   @Tag("remote")
   @Owner("Kristina Gaevskaya")
   @Epic("Учёба")
   @Story("Дипломный проект")
-  @DisplayName("Проверка отображения основные разделов на странице")
+  @DisplayName("Проверка отображения основных разделов на странице")
   @Severity(SeverityLevel.CRITICAL)
   void mainPageTest() {
     mainPage.openPage();

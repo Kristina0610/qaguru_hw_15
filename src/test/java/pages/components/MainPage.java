@@ -1,16 +1,18 @@
 package pages.components;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
   // SelenideElements / locator / etc
-  SelenideElement menubar = $("[role = menubar]");
+  SelenideElement menubar = $("[role = list]"),
+          closeCookie = $("[aria-label=\"Закрыть уведомление\"]");
+
 
   @Step("Открываем главную страницу")
   public MainPage openPage() {
@@ -27,8 +29,15 @@ public class MainPage {
   }
 
   @Step("Наводим мышку на раздел {value}")
-  public MainPage sectionClick(String value) {
-    menubar.shouldHave(Condition.text(value)).hover();
+  public MainPage sectionMouseOn(String value) {
+    menubar.$(byText(value)).hover();
+
+    return this;
+  }
+
+  @Step("Закрыть информацию о Cookie")
+  public MainPage closeCookie() {
+    closeCookie.click();
 
     return this;
   }
