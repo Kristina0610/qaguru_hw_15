@@ -12,7 +12,6 @@ public class AutomatedQaSectionPage {
 
 
   SelenideElement link = $("[href=\"/automatedqa\"]"),
-          //sectionName = $(byText("Тестирование")),
           classAuto = $("#tab2_550987857"),
           classSubsection = $("div #rec551026942"),
           fieldTextNumber = $(".tn-elem__5510269421676430365188 > div:nth-child(1)");
@@ -21,7 +20,6 @@ public class AutomatedQaSectionPage {
   @Step("Переход в раздел '{value}'")
   public AutomatedQaSectionPage servicesDisplayOn(String value) {
     link.shouldBe(visible);
-    //sectionName.click();
     $(byText(value)).click();
 
     return this;
