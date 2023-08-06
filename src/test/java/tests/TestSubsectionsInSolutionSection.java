@@ -36,10 +36,15 @@ public class TestSubsectionsInSolutionSection extends TestBase {
     //$("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
     $("ul [role=\"list\"]").shouldBe(cssValue("display", "block"));
     //$("[href=\"/capitalmarkets\"]").shouldBe(cssValue("display", "block"));
-    for (int i = 0; i < subsection.length; i++) {
+   /* for (int i = 0; i < subsection.length; i++) {
       for (int j = 0; j < subsection[i].length; j++) {
         $("[href=" + subsection[i][j] + "]").shouldHave(Condition.text(subsection[i][j++]));
       }
+    }*/
+    for (int i = 0; i < subsection.length; i++) {
+
+        $("[href=" + subsection[i][0] + "]").shouldHave(Condition.text(subsection[i][1]));
+
     }
 
     /*$("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
