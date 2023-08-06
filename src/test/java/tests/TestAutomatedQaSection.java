@@ -26,6 +26,7 @@ public class TestAutomatedQaSection extends TestBase {
   @Severity(SeverityLevel.CRITICAL)
   void AutomatedQaSectionPageTest() {
     mainPage.openPage()
+            .closeCookie()
             .sectionMouseOn(service);
     automatedQaSectionPage.servicesDisplayOn(section)
             .searchSubsection(subsection)
