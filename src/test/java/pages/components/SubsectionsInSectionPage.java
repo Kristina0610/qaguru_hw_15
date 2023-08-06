@@ -26,7 +26,7 @@ public class SubsectionsInSectionPage {
 
   @Step("Проверка отображения подраздела: '{value2}'")
   public SubsectionsInSectionPage shouldHaveText(String value1, String value2) {
-    $("[href=" + value1 + "]").shouldHave(Condition.text(value2));
+    $("[href=" + value1 + "]").shouldHave(Condition.innerText(value2));
     return this;
   }
 
