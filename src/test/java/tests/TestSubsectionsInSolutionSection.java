@@ -33,25 +33,20 @@ public class TestSubsectionsInSolutionSection extends TestBase {
     mainPage.openPage()
             .closeCookie()
             .sectionMouseOn(section);
-    //$("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
     $("ul [role=\"list\"]").shouldBe(cssValue("display", "block"));
     //$("[href=\"/capitalmarkets\"]").shouldBe(cssValue("display", "block"));
-   /* for (int i = 0; i < subsection.length; i++) {
-      for (int j = 0; j < subsection[i].length; j++) {
-        $("[href=" + subsection[i][j] + "]").shouldHave(Condition.text(subsection[i][j++]));
-      }
-    }*/
-    for (int i = 0; i < subsection.length; i++) {
+   /*for (int i = 0; i < subsection.length; i++) {
 
         $("[href=" + subsection[i][0] + "]").shouldBe(visible).shouldHave(Condition.text(subsection[i][1]));
 
-    }
+    } */
 
-    /*$("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
+
+    $("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
     $("[href=\"/risks\"]").shouldHave(Condition.text("Управление рисками"));
     $("[href=\"/brokerage\"]").shouldHave(Condition.text("Брокерский бизнес"));
     $("[href=\"/treasury\"]").shouldHave(Condition.text("Казначейство"));
-    $("[href=\"/loan\"]").shouldHave(Condition.text("Кредитный конвейер"));*/
+    $("[href=\"/loan\"]").shouldHave(Condition.text("Кредитный конвейер"));
 
   }
 }
