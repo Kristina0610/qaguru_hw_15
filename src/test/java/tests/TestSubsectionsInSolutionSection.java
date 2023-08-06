@@ -15,6 +15,11 @@ public class TestSubsectionsInSolutionSection extends TestBase {
   MainPage mainPage = new MainPage();
 
   String section = "Решения";
+  String[][] subsection = {{"capitalmarkets", "Системы трейдинга"},
+          {"risks", "Управление рисками"},
+          {"brokerage", "Брокерский бизнес"},
+          {"treasury", "Казначейство"},
+          {"loan", "Кредитный конвейер"}};
 
   @Test
   @Tag("remote")
@@ -27,11 +32,16 @@ public class TestSubsectionsInSolutionSection extends TestBase {
     mainPage.openPage()
             .closeCookie()
             .sectionMouseOn(section);
-    $("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
+    for (int i = 0; i < subsection.length; i++) {
+      for (int j = 0; j < subsection[i].length; j++) {
+        $("\"[href=\\\"/" + subsection[i][j] + "\\\"]\"").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
+      }
+    }
+    /*$("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
     $("[href=\"/risks\"]").shouldHave(Condition.text("Управление рисками"));
     $("[href=\"/brokerage\"]").shouldHave(Condition.text("Брокерский бизнес"));
     $("[href=\"/treasury\"]").shouldHave(Condition.text("Казначейство"));
-    $("[href=\"/loan\"]").shouldHave(Condition.text("Кредитный конвейер"));
+    $("[href=\"/loan\"]").shouldHave(Condition.text("Кредитный конвейер"));*/
 
   }
 }
