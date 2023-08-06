@@ -63,7 +63,7 @@ public class TestSubsectionsInSection extends TestBase {
   }
 
   @Test
-  @Tag("simple")
+  @Tag("remote")
   @Owner("Kristina Gaevskaya")
   @Epic("Учёба")
   @Story("Дипломный проект")
