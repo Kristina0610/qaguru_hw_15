@@ -15,7 +15,7 @@ public class TestSubsectionsInSolutionSection extends TestBase {
   MainPage mainPage = new MainPage();
 
   String section = "Решения";
-  String[][] subsection = {{"capitalmarkets", "Системы трейдинга"},
+  String[][] subsection = {{"\"/capitalmarkets\"", "Системы трейдинга"},
           {"risks", "Управление рисками"},
           {"brokerage", "Брокерский бизнес"},
           {"treasury", "Казначейство"},
@@ -34,7 +34,7 @@ public class TestSubsectionsInSolutionSection extends TestBase {
             .sectionMouseOn(section);
     for (int i = 0; i < subsection.length; i++) {
       for (int j = 0; j < subsection[i].length; j++) {
-        $("[href=\"/" + subsection[i][j] + "\"]").shouldBe(visible).shouldHave(Condition.text(subsection[i][j++]));
+        $("[href=" + subsection[i][j] + "]").shouldBe(visible).shouldHave(Condition.text(subsection[i][j++]));
       }
     }
     /*$("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
