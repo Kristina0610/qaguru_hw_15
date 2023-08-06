@@ -43,7 +43,7 @@ public class TestSubsectionsInSolutionSection extends TestBase {
     }*/
     for (int i = 0; i < subsection.length; i++) {
 
-        $("[href=" + subsection[i][0] + "]").shouldHave(Condition.text(subsection[i][1]));
+        $("[href=" + subsection[i][0] + "]").shouldBe(visible).shouldHave(Condition.text(subsection[i][1]));
 
     }
 
