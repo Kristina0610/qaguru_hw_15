@@ -32,16 +32,11 @@ public class TestSubsectionsInSolutionSection extends TestBase {
     mainPage.openPage()
             .closeCookie()
             .sectionMouseOn(section);
-    for (int i = 0; i < subsection.length; i++) {
-      for (int j = 0; j < subsection[i].length; j++) {
-        $("[href=" + subsection[i][j] + "]").shouldBe(visible);
-      }
-    }
-    /*$("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
+    $("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
     $("[href=\"/risks\"]").shouldHave(Condition.text("Управление рисками"));
     $("[href=\"/brokerage\"]").shouldHave(Condition.text("Брокерский бизнес"));
     $("[href=\"/treasury\"]").shouldHave(Condition.text("Казначейство"));
-    $("[href=\"/loan\"]").shouldHave(Condition.text("Кредитный конвейер"));*/
+    $("[href=\"/loan\"]").shouldHave(Condition.text("Кредитный конвейер"));
 
   }
 }
