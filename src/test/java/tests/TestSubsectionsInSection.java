@@ -18,6 +18,8 @@ public class TestSubsectionsInSection extends TestBase {
 
   String sectionSolutions = "Решения";
   String sectionServices = "Услуги";
+  String sectionCompany = "Компания";
+
   String[][] subsectionSolutions = {{"\"/capitalmarkets\"", "Системы трейдинга"},
           {"\"/risks\"", "Управление рисками"},
           {"\"/brokerage\"", "Брокерский бизнес"},
@@ -28,6 +30,9 @@ public class TestSubsectionsInSection extends TestBase {
           {"\"/automatedqa\"", "Тестирование"},
           {"\"/development\"", "Разработка"},
           {"\"/processes\"", "Аналитика"}};
+
+  String[][] subsectionCompany = {{"\"/contact-us\"", "Контакты"},
+          {"\"/company\"", "Компания"}};
 
   @Test
   @Tag("remote")
@@ -71,9 +76,11 @@ public class TestSubsectionsInSection extends TestBase {
   @Severity(SeverityLevel.CRITICAL)
   void SubsectionsInSectionCompanyTest() {
     mainPage.openPage()
-            .sectionMouseOn("Компания");
+            .sectionMouseOn(sectionCompany);
 
-    $("[href=\"/contact-us\"]").shouldHave(Condition.text("Контакты"));
+    for (int i = 0; i < subsectionCompany.length; i++) {
+      subsectionsInSectionPage.shouldHaveText(subsectionCompany[i][0], subsectionCompany[i][1]);
+    }
   }
 
 
