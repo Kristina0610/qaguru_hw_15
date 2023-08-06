@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Configuration;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -52,7 +53,7 @@ public class TestSubsectionsInSection extends TestBase {
   void SubsectionsInSectionServicesTest() {
     mainPage.openPage()
             .sectionMouseOn(sectionServices);
-
+    Configuration.timeout = 1000;
     for (int i = 0; i < subsectionServices.length; i++) {
       subsectionsInSectionPage.shouldHaveText(subsectionServices[i][0], subsectionServices[i][1]);
     }
