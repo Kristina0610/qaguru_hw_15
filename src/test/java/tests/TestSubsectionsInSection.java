@@ -30,7 +30,7 @@ public class TestSubsectionsInSection extends TestBase {
   @Owner("Kristina Gaevskaya")
   @Epic("Учёба")
   @Story("Дипломный проект")
-  @DisplayName("Проверка отображения подразделов в секции '{sectionSolutions}'")
+  @DisplayName("Проверка отображения подразделов в секции 'Решения'")
   @Severity(SeverityLevel.CRITICAL)
   void SubsectionsInSectionSolutionsTest() {
     mainPage.openPage()
