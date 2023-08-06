@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
@@ -7,6 +8,8 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.components.MainPage;
 import pages.components.SubsectionsInSectionPage;
+
+import static com.codeborne.selenide.Selenide.$;
 
 
 public class TestSubsectionsInSection extends TestBase {
@@ -58,5 +61,21 @@ public class TestSubsectionsInSection extends TestBase {
       subsectionsInSectionPage.shouldHaveText(subsectionServices[i][0], subsectionServices[i][1]);
     }
   }
+
+  @Test
+  @Tag("simple")
+  @Owner("Kristina Gaevskaya")
+  @Epic("Учёба")
+  @Story("Дипломный проект")
+  @DisplayName("Проверка отображения подразделов в секции 'Компания'")
+  @Severity(SeverityLevel.CRITICAL)
+  void SubsectionsInSectionCompanyTest() {
+    mainPage.openPage()
+            .sectionMouseOn("Компания");
+
+    $("[href=\"/contact-us\"]").shouldHave(Condition.text("Контакты"));
+  }
+
+
 
 }
