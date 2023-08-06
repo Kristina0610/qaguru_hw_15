@@ -34,7 +34,7 @@ public class TestSubsectionsInSolutionSection extends TestBase {
             .sectionMouseOn(section);
     for (int i = 0; i < subsection.length; i++) {
       for (int j = 0; j < subsection[i].length; j++) {
-        $("\"[href=\\\"/" + subsection[i][j] + "\\\"]\"").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
+        $("[href=\"/" + subsection[i][j] + "\"]").shouldBe(visible).shouldHave(Condition.text(subsection[i][j++]));
       }
     }
     /*$("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
