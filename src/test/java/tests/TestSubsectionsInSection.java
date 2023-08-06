@@ -1,15 +1,11 @@
 package tests;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.components.MainPage;
 import pages.components.SubsectionsInSectionPage;
-
-import static com.codeborne.selenide.Selenide.$;
 
 
 public class TestSubsectionsInSection extends TestBase {
@@ -82,7 +78,5 @@ public class TestSubsectionsInSection extends TestBase {
       subsectionsInSectionPage.shouldHaveText(subsectionCompany[i][0], subsectionCompany[i][1]);
     }
   }
-
-
 
 }
