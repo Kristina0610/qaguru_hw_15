@@ -5,7 +5,6 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.cssValue;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SubsectionsInSectionPage {
@@ -18,7 +17,6 @@ public class SubsectionsInSectionPage {
   @Step("Сделать список '{value}' видимым")
   public SubsectionsInSectionPage listDisplayOn(String value) {
     list.shouldBe(cssValue("display", "block"));
-            //.shouldBe(visible);
 
     return this;
   }
