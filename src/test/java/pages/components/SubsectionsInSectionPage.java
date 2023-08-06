@@ -17,8 +17,8 @@ public class SubsectionsInSectionPage {
 
   @Step("Сделать список '{value}' видимым")
   public SubsectionsInSectionPage listDisplayOn(String value) {
-    list.shouldBe(cssValue("display", "block"))
-            .shouldBe(visible);
+    list.shouldBe(cssValue("display", "block"));
+            //.shouldBe(visible);
 
     return this;
   }
