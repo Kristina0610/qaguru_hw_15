@@ -27,9 +27,7 @@ public class TestSubsectionsInSolutionSection extends TestBase {
     mainPage.openPage()
             .closeCookie()
             .sectionMouseOn(section);
-    //$("[href=\"/capitalmarkets\"]").shouldHave(Condition.text("Системы трейдинга"));
-    $(".t-menusub__menu_bottom > div:nth-child(1)").shouldBe(visible);
-    $("[href=\"/capitalmarkets\"]").shouldHave(Condition.text("Системы трейдинга"));
+    $("[href=\"/capitalmarkets\"]").shouldBe(visible).shouldHave(Condition.text("Системы трейдинга"));
     $("[href=\"/risks\"]").shouldHave(Condition.text("Управление рисками"));
     $("[href=\"/brokerage\"]").shouldHave(Condition.text("Брокерский бизнес"));
     $("[href=\"/treasury\"]").shouldHave(Condition.text("Казначейство"));
